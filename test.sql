@@ -23,3 +23,4 @@ FOREIGN KEY(activity_id) REFERENCES Activity(id),
 FOREIGN KEY (users) REFERENCES user(id)
 )
 
+//hello world
