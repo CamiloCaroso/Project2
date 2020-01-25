@@ -1,8 +1,11 @@
 $(document).ready(function() {
 
     document.getElementById("submitRes").addEventListener('click', function(){
-        
-
+        if(!document.getElementById("userRes").value || !document.getElementById("passwordRes").value){
+            document.getElementById("messageRes").textContent = "Fill the inputs"
+            document.getElementById("messageRes").style.color = "red"
+            document.getElementById("messageRes").style.display = "block"
+        } else {
             let code = function() {
                 return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
                   var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
@@ -21,6 +24,9 @@ $(document).ready(function() {
 
             document.getElementById("userRes").value = "";
             document.getElementById("passwordRes").value = "";
+        }
+
+            
             
         
         
