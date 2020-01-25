@@ -1,2 +1,8 @@
 models/index.js
 node_modules
+
+public/js/jsLog/log.js
+public/js/jsLog/register.js
+
+routes/apiRoutes.js
+routes/htmlRoutes.js
