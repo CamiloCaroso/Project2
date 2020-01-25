@@ -1,9 +1,7 @@
 $(document).ready(function() {
 
     document.getElementById("submitRes").addEventListener('click', function(){
-        if(document.getElementById("passwordConfirmRes").value !== document.getElementById("passwordRes").value){
-            alert("different password")
-        } else {
+        
 
             let code = function() {
                 return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -23,8 +21,8 @@ $(document).ready(function() {
 
             document.getElementById("userRes").value = "";
             document.getElementById("passwordRes").value = "";
-            document.getElementById("passwordConfirmRes").value = "";
-        }
+            
+        
         
     })
 
@@ -33,7 +31,9 @@ $(document).ready(function() {
             if(!data.length){
                 userPost(fullUser)
             } else {
-                alert("Username unavailable")
+                document.getElementById("messageRes").textContent = "username unavailable"
+                document.getElementById("messageRes").style.color = "red"
+                document.getElementById("messageRes").style.display = "block"
             }
             
             
@@ -44,6 +44,9 @@ $(document).ready(function() {
 
 
     function userPost(user){
+        document.getElementById("messageRes").textContent = "account created"
+        document.getElementById("messageRes").style.color = "green"
+        document.getElementById("messageRes").style.display = "block"
         $.post("/api/users/new", user)
     }
 });

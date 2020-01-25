@@ -144,22 +144,23 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
         <div class="modal-body">
-          <form action="/examples/actions/confirmation.php" method="post">
+          
             <div class="form-group">
               <i class="fa fa-user"></i>
-              <input type="text" class="form-control" placeholder="Username" required="required">
+              <input id="userLog" type="text" class="form-control" placeholder="Username" required="required">
             </div>
             <div class="form-group">
               <i class="fa fa-lock"></i>
-              <input type="password" class="form-control" placeholder="Password" required="required">
+              <input id="passwordLog" type="password" class="form-control" placeholder="Password" required="required">
             </div>
+            <span id="messageLog"></span>
             <div class="form-group">
-              <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">
+              <button id="submitLog" class="btn btn-primary btn-block btn-lg">Log in</button>
             </div>
             <div class="modal-footer">
               <a href="#newUserModal" data-dismiss="modal" data-toggle="modal">Create an account</a>
             </div>
-          </form>
+          
 
         </div>
       </div>
@@ -174,22 +175,23 @@
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
         <div class="modal-body">
-          <form action="/examples/actions/confirmation.php" method="post">
+          
             <div class="form-group">
               <i class="fa fa-user"></i>
-              <input type="text" class="form-control" placeholder="Username" required="required">
+              <input id="userRes" type="text" class="form-control" placeholder="Username" required="required">
             </div>
             <div class="form-group">
               <i class="fa fa-lock"></i>
-              <input type="password" class="form-control" placeholder="Password" required="required">
+              <input id="passwordRes" type="password" class="form-control" placeholder="Password" required="required">
             </div>
+            <span id="messageRes"></span>
             <div class="form-group">
-              <input type="submit" class="btn btn-primary btn-block btn-lg" value="createAccount">
+              <button id="submitRes" class="btn btn-primary btn-block btn-lg">Log in</button>
             </div>
             <div class="modal-footer">
               <a href="#myModal" data-dismiss="modal" data-toggle="modal">Already Have an Account?</a>
             </div>
-          </form>
+         
 
         </div>
       </div>

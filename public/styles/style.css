@@ -486,3 +486,10 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   display: inline-block;
   margin: 100px auto;
 }
+
+#messageRes{
+  display: none;
+}
+#messageLog{
+  display: none;
+}
