@@ -20,6 +20,13 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1]
       }
+    },
+    Posts: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+      validate: {
+        len: [0]
+      }
     }
   });
   return users;

@@ -71,7 +71,7 @@ module.exports = function(app) {
       db.users.create({
         user: req.body.user,
         password: req.body.password,
-        userCode: req.body.userCode
+        userCode: req.body.userCode,
       })
         .then(function(dbUsers) {
           res.json(dbUsers);
@@ -79,5 +79,26 @@ module.exports = function(app) {
   });
 
 
-  
+  app.get("/api/usersPosts/all", function(req, res) {
+    db.posts.findAll({})
+      .then(function(dbPosts) {
+        res.json(dbPosts);
+      });
+  });
+
+  app.post("/api/usersPosts/new", function(req, res){
+    db.posts.create({
+      user: req.body.user,
+      userCode: req.body.code,
+      activity: req.body.activity,
+      message: req.body.message
+    }) 
+      .then(function(dbPosts) {
+        res.json(dbPosts);
+      });
+  })
+    
+
+
+
 };

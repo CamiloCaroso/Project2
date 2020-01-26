@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+}
+
+#feedContainer{
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+.postCont{
+    position: relative;
+    word-break: break-all;
+    border: solid 1px #bebebe;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 20px;
+
+}
+
+.user{
+    font-weight: bold;
+    position: absolute;
+}
+
+.message{
+    font-size: 15px;
+    text-align: left;
+}
