@@ -1,29 +1,27 @@
-body{
-    text-align: center;
-}
 #history{
     margin-left: 400px;
     margin-right: 400px;
 }
 
 #feedContainer{
-    margin-left: 400px;
-    margin-right: 400px;
+    margin: 20px auto;
+    height: 75vh;
+    overflow: scroll;
 }
 
 .postCont{
+    display: block;
     position: relative;
     word-break: break-all;
-    border: solid 1px #bebebe;
-    border-radius: 20px;
-    padding: 10px;
+    border-radius: 5px;
+    padding: 20px;
     margin-top: 20px;
-
 }
 
 .user{
     font-weight: bold;
     position: absolute;
+    margin-right: 20px;
 }
 
 .message{

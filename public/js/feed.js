@@ -4,6 +4,7 @@ $.get("/api/users/find/" + key, function(data){
         location.href = "/"
     } else {
         document.getElementById("user").textContent = data[0].user
+        document.getElementById("welcomeUser").textContent = data[0].user
     }
 })
 $(document).ready(function() {
@@ -38,8 +39,10 @@ $(document).ready(function() {
 
 
         user.className = "user"
+        activity.id = "activity"
         message.className = "message"
         postCont.className = "postCont"
+        postCont.id = "postCont"
         
         user.append(userT)
         activity.append(activityT)
@@ -50,7 +53,11 @@ $(document).ready(function() {
         postCont.append(message)
 
         feedContainer.prepend(postCont)
+        document.getElementById("activity").style.textAlign = "right";
+        document.getElementById("postCont").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+
     }
+
 
     document.getElementById("logout").addEventListener('click', function(){
         localStorage.clear();

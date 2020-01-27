@@ -55,6 +55,7 @@ $(document).ready(function() {
         //del.className = "delete"
         //del.textContent = "X"
         user.className = "user"
+        activity.className = "activity"
         message.className = "message"
         postCont.className = "postCont"
         
@@ -82,8 +83,6 @@ $(document).ready(function() {
     
     document.getElementById("submit").addEventListener('click', function(){
 
-        
-        
         $.get("/api/users/find/" + key, function(data){
             name = data[0].user
             let userPost = {

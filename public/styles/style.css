@@ -60,6 +60,7 @@ section h2 {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
+  margin-bottom: 50px;
 }
 
 #mainNav .navbar-brand {
@@ -150,8 +151,8 @@ header.masthead {
   padding-top: 150px;
   padding-bottom: 100px;
   color: white;
-  background: url("../img/bg-pattern.png"), #05a0cf;
-  background: url("../img/bg-pattern.png"), linear-gradient(to left, #08b5bb, #14606d);
+  background: url("../img/bg-pattern.svg"), #05a0cf;
+  background: url("../img/bg-pattern.svg"), linear-gradient(to left, #08b5bb, #14606d);
 }
 
 header.masthead .header-content {
@@ -178,7 +179,7 @@ header.masthead .device-container .screen img {
   header.masthead {
     height: 100vh;
     min-height: 775px;
-    padding-top: 0;
+    padding-top: 50px;
     padding-bottom: 0;
   }
   header.masthead .header-content {
@@ -313,7 +314,7 @@ section.cta .overlay {
 }
 
 section.login {
-  text-align: center;
+  text-align: left;
 }
 
 section.login h2 {

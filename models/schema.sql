@@ -1,3 +1,8 @@
+-- Drops the FitMe if it exists currently --
+DROP DATABASE IF EXISTS FitMe;
+-- Creates the "FitMe" database --
+CREATE DATABASE FitMe;
+
 USE FitMe;
 CREATE TABLE Activity(
 id INT AUTO_INCREMENT,
