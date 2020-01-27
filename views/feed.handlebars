@@ -32,9 +32,9 @@
 <header class="masthead">
     <div class="container h-100">
         <div class="row h-100">
-            <div class="col-lg-7 my-auto">
-                <div class="header-content mx-auto animated fadeIn">
-                    <div class="feed">
+            <div class="col-lg-7 welcome">
+                <div class="header-content mt-0 mx-auto animated fadeIn">
+                    <div id="recent" class="recent-feed">
                         <h1 class="mg-1">Welcome back, <span id="welcomeUser"></span>!</h1>
                         <h3 class="mb-5">Are you ready to share a new update?<br>Click the buttom below to make a new
                             post!</h3>
@@ -42,7 +42,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5 my-auto">
+            <div class="col-lg-5 my-auto community-feed">
+                <h1 class="mg-1">Recent community posts</h1>
                 <div class="feed-container">
                     <aside id="feedContainer">
 
@@ -53,20 +54,6 @@
     </div>
 </header>
 
-<section class="about bg-primary text-center" id="about">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 mx-auto">
-                {{!-- <div id="feedContainer">
-
-                </div> --}}
-                <h2 class="section-heading">About About About!</h2>
-                <p>Ut tempor, lacus quis efficitur cursus, libero velit sodales est, in elementum tellus velit nec leo.!
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>

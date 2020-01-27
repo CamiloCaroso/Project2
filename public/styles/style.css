@@ -494,3 +494,8 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 #messageLog{
   display: none;
 }
+
+.welcome {
+  height: 75vh;
+  margin-top: 150px;
+}
