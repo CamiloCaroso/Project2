@@ -51,8 +51,10 @@ $(document).ready(function() {
         postCont.id = "postCont"
         
         user.append(userT)
+        activity.append("Activity: ")
         activity.append(activityT)
         date.append(dateT)
+        message.append("Status: ")
         message.append(messageT)
 
         postCont.append(user)
@@ -61,7 +63,7 @@ $(document).ready(function() {
         postCont.append(message)
 
         feedContainer.prepend(postCont)
-        document.getElementById("activity").style.textAlign = "right";
+        document.getElementById("activity").style.marginLeft = "50px";
         document.getElementById("postCont").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
 
     }
