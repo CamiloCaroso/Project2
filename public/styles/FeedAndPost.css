@@ -1,9 +1,9 @@
-#history{
+/* #history{
     margin-left: 400px;
     margin-right: 400px;
 }
 
-
+ */
 .community-feed {
     margin-bottom: 150px;
 }
@@ -30,6 +30,7 @@
 
 .activity{
     display: inline-block;
+    margin-left: 50px;
 }
 
 .date{
@@ -43,3 +44,17 @@
     font-size: 15px;
     text-align: left;
 }
+
+h5 {
+    margin-top: 25px;
+}
+
+#message {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
+select#activity {
+    margin-left: 0 !important;
+}  

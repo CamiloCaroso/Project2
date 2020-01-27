@@ -155,6 +155,16 @@ header.masthead {
   background: url("../img/bg-pattern.svg"), linear-gradient(to left, #08b5bb, #14606d);
 }
 
+header.mastheadPost {
+  background: url("../img/bg-pattern.svg"), #5507bb;
+  background: url("../img/bg-pattern.svg"), linear-gradient(to left, #5507bb, #6d0297);
+}
+
+header.mastheadFeed {
+  background: url("../img/bg-pattern.svg"), #0f3e7c;
+  background: url("../img/bg-pattern.svg"), linear-gradient(to left, #0f3e7c, #3d51aa);
+}
+
 header.masthead .header-content {
   max-width: 500px;
   margin-bottom: 100px;

@@ -4,6 +4,7 @@ $.get("/api/users/find/" + key, function(data){
         location.href = "/"
     } else {
         document.getElementById("user").textContent = data[0].user
+        document.getElementById("welcomeUserFeed").textContent = data[0].user
     }
 })
 
@@ -12,7 +13,10 @@ $(document).ready(function() {
         location.href = "/feed"
     })
 
-    
+    $.get("/api/usersPosts/find/" + key, function(data){
+        postsRE = data
+        initializeRows()
+    })    
 
     document.getElementById("newPost").addEventListener('click', function(){
         document.getElementById("postToCreate").style.display = "block"
@@ -49,35 +53,38 @@ $(document).ready(function() {
 
         
         let user = document.createElement("div")
-        let activity = document.createElement("div")
         let date = document.createElement("div")
-        //let del = document.createElement("button")
+        let activity = document.createElement("div")
         let message = document.createElement("p")
         let postCont = document.createElement("div")
-
+        
+        //let del = document.createElement("button")
         //del.value = post.id
         //del.className = "delete"
         //del.textContent = "X"
         user.className = "user"
+        activity.id = "activity"
         activity.className = "activity"
         date.className = "date"
         message.className = "message"
         postCont.className = "postCont"
+        postCont.id = "postCont"
         
         user.append(userT)
+        activity.append("Activity: ")
         activity.append(activityT)
         date.append(dateT)
+        message.append("Status: ")
         message.append(messageT)
-        
 
         postCont.append(user)
         postCont.append(activity)
         postCont.append(date)
-        //postCont.append(del)
         postCont.append(message)
-        
 
-        history.prepend(postCont)
+        feedContainer.prepend(postCont)
+        document.getElementById("activity").style.marginLeft = "50px";
+        document.getElementById("postCont").style.backgroundColor = "rgba(0, 0, 0, 0.5)";
     }
     /*let deletePost = document.getElementsByClassName('delete');
     for(var i = 0; i < deletePost.length; i++){
