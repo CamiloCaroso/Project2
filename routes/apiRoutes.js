@@ -79,6 +79,8 @@ module.exports = function(app) {
   });
 
 
+  //Post and Feed
+
   app.get("/api/usersPosts/all", function(req, res) {
     db.posts.findAll({})
       .then(function(dbPosts) {
@@ -97,6 +99,17 @@ module.exports = function(app) {
         res.json(dbPosts);
       });
   })
+
+  app.get("/api/usersPosts/find/:code", function(req, res){
+    db.posts.findAll({
+      where: {
+        userCode: req.params.code
+      }
+    })
+      .then(function(dbPosts) {
+        res.json(dbPosts);
+      });
+  });
     
 
 

@@ -1,6 +1,10 @@
 body{
     text-align: center;
 }
+#history{
+    margin-left: 400px;
+    margin-right: 400px;
+}
 
 #feedContainer{
     margin-left: 400px;

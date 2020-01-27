@@ -12,7 +12,6 @@ $(document).ready(function() {
     })
 
     let postsRE;
-    let feedContainer = document.getElementById("feedContainer")
     $.get("/api/usersPosts/all", function(data){
         postsRE = data
         initializeRows()
@@ -27,7 +26,6 @@ $(document).ready(function() {
     }
 
     function createNewPost(post){
-        console.log(post.activity)
         let userT = document.createTextNode(post.user)
         let activityT = document.createTextNode(post.activity)
         let messageT = document.createTextNode(post.message)
@@ -51,10 +49,7 @@ $(document).ready(function() {
         postCont.append(activity)
         postCont.append(message)
 
-        document.getElementById("feedContainer").prepend(postCont)
-        
-        
-        
+        feedContainer.prepend(postCont)
     }
 
     document.getElementById("logout").addEventListener('click', function(){
