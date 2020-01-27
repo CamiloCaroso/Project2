@@ -42,11 +42,15 @@ $(document).ready(function() {
     function createNewPost(post){
         let userT = document.createTextNode(post.user)
         let activityT = document.createTextNode(post.activity)
+        let dateCut = post.createdAt.substr(0, 10);
+        let timeCut = post.createdAt.substr(11, 5)
+        let dateT = document.createTextNode(dateCut + " / " + timeCut)
         let messageT = document.createTextNode(post.message)
 
         
         let user = document.createElement("div")
         let activity = document.createElement("div")
+        let date = document.createElement("div")
         //let del = document.createElement("button")
         let message = document.createElement("p")
         let postCont = document.createElement("div")
@@ -56,16 +60,19 @@ $(document).ready(function() {
         //del.textContent = "X"
         user.className = "user"
         activity.className = "activity"
+        date.className = "date"
         message.className = "message"
         postCont.className = "postCont"
         
         user.append(userT)
         activity.append(activityT)
+        date.append(dateT)
         message.append(messageT)
         
 
         postCont.append(user)
         postCont.append(activity)
+        postCont.append(date)
         //postCont.append(del)
         postCont.append(message)
         
